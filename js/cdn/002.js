@@ -48,8 +48,8 @@ function outputTasks() {
         var elements = document.querySelectorAll(".dkal i");
     for (var i = 0; i < elements.length; i++) {
       var element = elements[i];
-      element.innerHTML === '<li data-index='+i+'><div class="'+myClass+'">'+
-            data.textTask+'<span class="remove">  X</span></div></li>';
+      element.innerHTML === '<div data-index='+i+'><div class="'+myClass+'">'+
+            data.textTask+'<span class="remove">  X</span></div></div>';
     };
         
         return '<li data-index='+i+'><div class="'+myClass+'">'+
