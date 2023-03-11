@@ -45,11 +45,10 @@ function outputTasks() {
     let html = tasks.map(function(data,i) {
         let myClass = data.done ? 'done' : '';
         
-        var elements = document.querySelectorAll(".dkal i");
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      element.innerHTML === '<div data-index='+i+'><div class="'+myClass+'">'+
-            data.textTask+'<span class="remove">  X</span></div></div>';
+        var elements = document.querySelectorAll(".dkal");
+    for (var k = 0; k < elements.length; k++) {
+      var element = elements[k];
+      element.innerHTML = '<div data-index='+i+'><div class="'+myClass+'">'+data.textTask+'<span class="remove">  X </span></div></div>';
     };
         
         return '<li data-index='+i+'><div class="'+myClass+'">'+
