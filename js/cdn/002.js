@@ -46,7 +46,10 @@ function outputTasks() {
         let myClass = data.done ? 'done' : '';
         
         var elements = document.querySelectorAll(".dkal");
-     elements[i].innerHTML = data.textTask;
+        var match = elements.getAttribute('dkal');
+        if (i == match){
+     elements[i].innerHTML = ''+data.textTask+'';
+        };
     
         
         return '<li data-index='+i+'><div class="'+myClass+'">'+
