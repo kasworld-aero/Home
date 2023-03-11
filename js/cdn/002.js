@@ -46,7 +46,7 @@ function outputTasks() {
         let myClass = data.done ? 'done' : '';
         
         var elements = document.querySelectorAll(".dkal");
-     elements[i].innerHTML = '<div data-index='+i+'><div class="'+myClass+'">'+data.textTask+'<span class="remove">  X </span></div></div>';
+     elements[i].innerHTML = data.textTask;
     
         
         return '<li data-index='+i+'><div class="'+myClass+'">'+
