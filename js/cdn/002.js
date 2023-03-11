@@ -52,6 +52,9 @@ function outputTasks() {
     })
 
     myTasks.innerHTML = html.join('');
+    
+    var targetDiv = document.querySelector('.dkal[data-index="' + i + '"]');
+  targetDiv.appendChild(data.textTask);
 }
 
 function toggleDone(e) {
