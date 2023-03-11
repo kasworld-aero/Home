@@ -50,8 +50,7 @@ function outputTasks() {
         return '<li data-index='+i+'><div class="'+myClass+'">'+
             data.textTask+'<span class="remove">  X </span></div></li>';
         
-          var targetDiv = document.querySelector('.dkal[data-index="' + i + '"]');
-  targetDiv.appendChild(data.textTask);
+        
     })
 
     myTasks.innerHTML = html.join('');
