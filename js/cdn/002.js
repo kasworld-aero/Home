@@ -48,7 +48,7 @@ function outputTasks() {
     
         
         return '<li data-index='+i+'><div class="'+myClass+'">'+
-            data.textTask+'<span class="remove">  X</span></div></li>';
+            data.textTask+'<span class="remove">  X </span></div></li>';
         
           var targetDiv = document.querySelector('.dkal[data-index="' + i + '"]');
   targetDiv.appendChild(data.textTask);
@@ -78,3 +78,13 @@ function toggleDone(e) {
     saveStorage();
     outputTasks();
 }
+
+
+var ul = document.querySelector('.myTasks');
+ul.querySelectorAll('li').forEach(function(li) {
+  var div = document.createElement('div');
+  div.dataset.index = li.dataset.index;
+  div.innerHTML = li.innerHTML.replace('<span class="remove">  X </span>', ' ');
+  var targetDiv = document.querySelector('.dkal[data-index="' + li.dataset.index + '"]');
+  targetDiv.appendChild(div);
+});
