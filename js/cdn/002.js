@@ -80,8 +80,8 @@ function toggleDone(e) {
 
 
 var ul = document.querySelector('.myTasks');
+var div = document.querySelector('.dkal');
 ul.querySelectorAll('li').forEach(function(li) {
-  var div = document.createElement('div');
   div.dataset.index = li.dataset.index;
   div.innerHTML = li.innerHTML.replace('<span class="remove">  X </span>', ' ');
   var targetDiv = document.querySelector('.dkal[data-index="' + li.dataset.index + '"]');
