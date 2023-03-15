@@ -78,5 +78,16 @@ function toggleDone(e) {
     outputTasks();
 }
 
-
+const kul = document.querySelector("ul.myTasks");
+const klis = kul.querySelectorAll("li[data-index]");
+klis.forEach(li => {
+  const index = li.getAttribute("data-index");
+  const kdivs = document.querySelectorAll(`div[data-index="${index}"].dkal`);
+  if (kdivs.length === 0) {
+    return;
+  }
+  kdivs.forEach(div => {
+   div.innerHTML = li.innerHTML.replace('<span class="remove">  X </span>', ' ');
+  });
+});
 
