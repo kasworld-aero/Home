@@ -8,8 +8,8 @@ const jsFiles = [
 { src: 'https://www.googletagmanager.com/gtag/js?id=UA-131561064-1', async: 'true'},
 { src: 'https://www.googletagmanager.com/gtag/js?id=G-3DJHN7NEP3', async: 'true'},
 { src: '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit', async: 'true'},
-  { src: 'https://example.com/script1.js'},
-  { src: 'https://example.com/script4.js', crossorigin: 'anonymous' }
+  { src: 'https://kasworld-aero.github.io/pwa/cdn/service-worker.js'},
+  { src: 'https://cdn.jsdelivr.net/gh/kasworld-aero/pwa/cdn/service-worker.js', crossorigin: 'anonymous' }
 ];
 
 if (!localStorage.getItem('jsFiles')) {
